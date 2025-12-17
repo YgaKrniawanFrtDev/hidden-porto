@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Portofolio - Ygakrniawan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        background: "#050505",
+                        surface: "#0f0f11",
+                        primary: "#8b5cf6", // Violet
+                        secondary: "#06b6d4", // Cyan
+                        accent: "#ec4899", // Pink
+                        "text-main": "#ffffff",
+                        "text-muted": "#9ca3af",
+                    },
+                    fontFamily: {
+                        sans: ["Poppins", "sans-serif"],
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                        'hero-glow': 'conic-gradient(from 180deg at 50% 50%, #2a2a2a 0deg, #1a1a1a 180deg, #2a2a2a 360deg)',
+                    }
+                },
+            },
+        };
+    </script>
+    <style>
+        /* Animasi Futuristik Tambahan */
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) translateX(0px); }
+            25% { transform: translateY(-20px) translateX(10px); }
+            50% { transform: translateY(10px) translateX(-10px); }
+            75% { transform: translateY(-10px) translateX(5px); }
+        }
+        
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+        
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+        
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+        
+        .delay-700 {
+            animation-delay: 700ms;
+        }
+        
+        .delay-1000 {
+            animation-delay: 1s;
+        }
+        
+        .delay-1500 {
+            animation-delay: 1.5s;
+        }
+        
+        .animation-delay-1000 {
+            animation-delay: 1s;
+        }
+        
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+        
+        .animation-delay-3000 {
+            animation-delay: 3s;
+        }
+        /* Efek Parallax */
+        .parallax {
+            will-change: transform;
+            transition: transform 0.1s ease-out;
+        }
+        
+        /* Efek Glassmorphism */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+        
+        /* Animasi Partikel */
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); }
+            25% { transform: translateY(-10px) translateX(5px); }
+            50% { transform: translateY(5px) translateX(-5px); }
+            75% { transform: translateY(-5px) translateX(10px); }
+        }
+        
+        .floating {
+            animation: float 8s ease-in-out infinite;
+        }
+        /* Animasi Kustom */
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 0.3; }
+        }
+        
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .animate-gradient {
+            background-size: 200% 200%;
+            animation: gradientBG 15s ease infinite;
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+        }
+        
+        .animate-float {
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+        
+        .animate-pulse {
+            animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0.5;
+            }
+            50% {
+                opacity: 0.2;
+            }
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #050505;
+            color: #ffffff;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .glass-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .text-glow {
+            text-shadow: 0 0 40px rgba(139, 92, 246, 0.5);
+        }
+
+        .card-glow:hover {
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.15);
+            border-color: rgba(139, 92, 246, 0.3);
+        }
+
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+
+        @keyframes blob {
+            0% {
+                transform: translate(0px, 0px) scale(1);
+            }
+
+            33% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+
+            100% {
+                transform: translate(0px, 0px) scale(1);
+            }
+        }
+
+        .hologram-line {
+            background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.5), transparent);
+            height: 1px;
+            width: 100%;
+        }
+
+        .review-avatar {
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Sound Modal Styles */
+        .sound-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        
+        .sound-modal.show {
+            display: flex;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes pixelPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .pixel-button {
+            position: relative;
+            padding: 16px 32px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: 4px solid;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            image-rendering: pixelated;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .pixel-button:hover {
+            animation: pixelPulse 0.5s ease-in-out infinite;
+        }
+        
+        .sound-toggle {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .sound-toggle:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Love Button Animation */
+        @keyframes heartBeat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.3); }
+            50% { transform: scale(1.1); }
+            75% { transform: scale(1.25); }
+        }
+        
+        .heart-beat {
+            animation: heartBeat 0.6s ease-in-out;
+        }
+        
+        @keyframes floatHeart {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) scale(1.5);
+                opacity: 0;
+            }
+        }
+        
+        .floating-heart {
+            position: fixed;
+            animation: floatHeart 2s ease-out forwards;
+            pointer-events: none;
+            z-index: 9999;
+        }
+        
+        /* Loading Screen Styles */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #050505;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 99999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        .loading-screen.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        @keyframes pixelPulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.1); }
+        }
+        
+        .pixel-loader {
+            display: grid;
+            grid-template-columns: repeat(3, 20px);
+            grid-gap: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .pixel-block {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, #8b5cf6, #ec4899);
+            animation: pixelPulse 1.5s ease-in-out infinite;
+        }
+        
+        .pixel-block:nth-child(1) { animation-delay: 0s; }
+        .pixel-block:nth-child(2) { animation-delay: 0.1s; }
+        .pixel-block:nth-child(3) { animation-delay: 0.2s; }
+        .pixel-block:nth-child(4) { animation-delay: 0.3s; }
+        .pixel-block:nth-child(5) { animation-delay: 0.4s; }
+        .pixel-block:nth-child(6) { animation-delay: 0.5s; }
+        .pixel-block:nth-child(7) { animation-delay: 0.6s; }
+        .pixel-block:nth-child(8) { animation-delay: 0.7s; }
+        .pixel-block:nth-child(9) { animation-delay: 0.8s; }
+        
+        .loading-text {
+            font-family: 'Courier New', monospace;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+        }
+        
+        .loading-percentage {
+            font-family: 'Courier New', monospace;
+            font-size: 48px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #8b5cf6, #06b6d4, #ec4899);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 3s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .loading-bar-container {
+            width: 300px;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        
+        .loading-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #8b5cf6, #06b6d4, #ec4899);
+            background-size: 200% 100%;
+            animation: loadingBarMove 2s linear infinite;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        @keyframes loadingBarMove {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 200% 0%; }
+        }
+    </style>
+</head>
+
+<body class="antialiased overflow-x-hidden selection:bg-primary selection:text-white">
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="pixel-loader">
+            <div class="pixel-block"></div>
+            <div class="pixel-block"></div>
+            <div class="pixel-block"></div>
+            <div class="pixel-block"></div>
+            <div class="pixel-block"></div>
+            <div class="pixel-block"></div>
+            <div class="pixel-block"></div>
+            <div class="pixel-block"></div>
+            <div class="pixel-block"></div>
+        </div>
+        <div class="loading-text">Loading</div>
+        <div class="loading-percentage" id="loadingPercentage">0%</div>
+        <div class="loading-bar-container">
+            <div class="loading-bar" id="loadingBar"></div>
+        </div>
+    </div>
+    <!-- Sound Modal -->
+    <div id="soundModal" class="sound-modal">
+        <div class="text-center">
+            <div class="mb-8">
+                <div class="inline-block p-6 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl border-4 border-white/10 mb-6">
+                    <span class="material-icons-round text-8xl text-white animate-pulse">music_note</span>
+                </div>
+                <h2 class="text-4xl md:text-6xl font-bold text-white mb-4 pixel-text">
+                    ENHANCE YOUR <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">EXPERIENCE</span>
+                </h2>
+                <p class="text-xl text-gray-400 mb-8">Would you like to enjoy pixel game music?</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <button onclick="enableSound()" class="pixel-button bg-gradient-to-r from-primary to-accent text-white border-primary hover:shadow-[0_0_30px_rgba(139,92,246,0.5)] transition-all">
+                    <span class="material-icons-round align-middle mr-2">volume_up</span>
+                    WITH SOUND
+                </button>
+                <button onclick="disableSound()" class="pixel-button bg-transparent text-white border-white/30 hover:bg-white/10 hover:border-white/50">
+                    <span class="material-icons-round align-middle mr-2">volume_off</span>
+                    NO SOUND
+                </button>
+            </div>
+            <p class="text-sm text-gray-500 mt-8">You can change this anytime from the navigation bar</p>
+        </div>
+    </div>
+    
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="winter-pixel-422896.mp3" type="audio/mpeg">
+    </audio>
+    <nav class="fixed top-0 w-full z-50 px-4 py-6 pointer-events-none" data-aos="fade-down" data-aos-duration="800" data-aos-delay="100">
+        <div class="max-w-6xl mx-auto flex items-center justify-between pointer-events-auto">
+            <div
+                class="glass-panel rounded-full px-6 py-4 flex items-center justify-between w-full shadow-2xl shadow-black/50">
+                <a class="flex items-center gap-2 font-bold text-xl tracking-tighter text-white" href="#">
+                    <div
+                        class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                        <span class="material-icons-round text-white text-lg">view_in_ar</span>
+                    </div>
+                    <span>Yoga Kurniawan<span class="text-primary">.</span></span>
+                </a>
+                <div class="hidden md:flex items-center gap-8 font-medium text-sm text-gray-400">
+                    <a class="hover:text-white transition-colors duration-300" href="#work">Pekerjaan</a>
+                    <a class="hover:text-white transition-colors duration-300" href="#tentang">Tentang</a>
+                    <a class="hover:text-white transition-colors duration-300" href="#services">Services</a>
+                </div>
+                <div class="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="500">
+                    <a class="hidden sm:inline-flex items-center gap-2 bg-white text-black hover:bg-gray-200 px-6 py-2.5 rounded-full text-sm font-bold transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                        href="#contact">
+                        Contact me
+                        <span class="material-icons-round text-sm">account_balance_wallet</span>
+                    </a>
+                    <!-- Sound Toggle Button -->
+                    <button id="soundToggle" onclick="toggleSound()" class="hidden sm:inline-flex items-center gap-2 glass-panel px-4 py-2.5 rounded-full text-sm font-medium text-white hover:bg-white/10 transition-all sound-toggle" title="Toggle Sound">
+                        <span id="soundIcon" class="material-icons-round text-lg">volume_up</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section
+        class="relative min-h-screen flex flex-col justify-center items-center text-center px-4 pt-32 pb-20 overflow-hidden">
+        <!-- Animated Background Elements -->
+        <div class="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-primary/10 blur-3xl animate-float" data-aos="zoom-in" data-aos-duration="2000"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-secondary/10 blur-3xl animate-float animation-delay-2000" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="300"></div>
+        <div class="absolute inset-0 w-full h-full bg-[#050505]">
+            <div
+                class="absolute top-0 -left-4 w-72 h-72 bg-primary rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-blob">
+            </div>
+            <div
+                class="absolute top-0 -right-4 w-72 h-72 bg-secondary rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-blob animation-delay-2000">
+            </div>
+            <div
+                class="absolute -bottom-8 left-20 w-72 h-72 bg-accent rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-blob animation-delay-4000">
+            </div>
+            <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
+        </div>
+        <div class="absolute inset-0 pointer-events-none z-0">
+            <div
+                class="absolute top-[20%] left-[5%] lg:left-[15%] w-24 h-24 glass-card rounded-2xl flex items-center justify-center animate-bounce duration-[3000ms] transform rotate-[-12deg] shadow-[0_0_30px_rgba(139,92,246,0.2)]">
+                <span
+                    class="material-icons-round text-5xl text-transparent bg-clip-text bg-gradient-to-br from-primary to-accent">token</span>
+            </div>
+            <div
+                class="absolute top-[15%] right-[5%] lg:right-[15%] w-20 h-20 glass-card rounded-2xl flex items-center justify-center animate-pulse duration-[4000ms] transform rotate-[12deg] shadow-[0_0_30px_rgba(6,182,212,0.2)]">
+                <span
+                    class="material-icons-round text-4xl text-transparent bg-clip-text bg-gradient-to-br from-secondary to-green-400">widgets</span>
+            </div>
+            <div
+                class="absolute bottom-[20%] left-[8%] lg:left-[20%] w-16 h-16 glass-card rounded-xl flex items-center justify-center animate-bounce duration-[5000ms] delay-700 transform rotate-[6deg]">
+                <span class="material-icons-round text-3xl text-white/80">code</span>
+            </div>
+            <div
+                class="absolute bottom-[30%] right-[10%] lg:right-[25%] w-14 h-14 glass-card rounded-2xl flex items-center justify-center animate-pulse duration-[6000ms] delay-1000 transform rotate-[-8deg] shadow-[0_0_25px_rgba(236,72,153,0.3)]">
+                <span class="material-icons-round text-3xl text-transparent bg-clip-text bg-gradient-to-br from-accent to-pink-400">rocket_launch</span>
+            </div>
+            <div
+                class="absolute top-[40%] left-[50%] transform -translate-x-1/2 w-12 h-12 glass-card rounded-xl flex items-center justify-center animate-spin duration-[10000ms] delay-1500">
+                <span class="material-icons-round text-2xl text-white/60">settings</span>
+            </div>
+        </div>
+        
+        <!-- Grid Pattern Overlay -->
+        <div class="absolute inset-0 pointer-events-none z-0 opacity-30">
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent bg-[length:200%_100%] animate-gradient"></div>
+            <div class="absolute inset-0" style="background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 50px 50px;"></div>
+        </div>
+        
+        <!-- Floating Particles -->
+        <div class="absolute inset-0 pointer-events-none z-0">
+            <div class="absolute top-1/3 left-1/3 w-2 h-2 bg-white/20 rounded-full animate-ping"></div>
+            <div class="absolute top-2/3 right-1/3 w-3 h-3 bg-blue-400/20 rounded-full animate-ping animation-delay-1000"></div>
+            <div class="absolute bottom-1/3 left-1/4 w-2 h-2 bg-purple-400/20 rounded-full animate-ping animation-delay-2000"></div>
+            <div class="absolute top-1/2 right-1/4 w-1 h-1 bg-pink-400/20 rounded-full animate-ping animation-delay-3000"></div>
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+            <div
+                class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel border border-white/10 text-xs font-medium mb-8 text-gray-300 backdrop-blur-md">
+                <span class="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_10px_#22c55e]"></span>
+                <span>Open for Commissions</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl lg:text-9xl font-extrabold tracking-tight mb-6 text-white leading-tight">
+                DIGITAL <br />
+                <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-secondary via-primary to-accent text-glow">REALITY</span>
+            </h1>
+            <p
+                class="text-xl md:text-2xl text-gray-400 mb-8 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="400">Merging <span class="text-white font-medium border-b border-primary/50">UI/UX</span>, <span
+                    class="text-white font-medium border-b border-secondary/50">Development</span>, and <span
+                    class="text-white font-medium border-b border-accent/50">Art</span> to create next-gen web
+                experiences.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <a class="group relative px-8 py-4 bg-white text-black rounded-full font-bold text-lg overflow-hidden w-full sm:w-auto transition-transform hover:scale-105"
+                    href="#work">
+                    <span class="relative z-10">Jelajahi Pekerjaan</span>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-secondary via-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div class="absolute inset-0 bg-white group-hover:opacity-0 transition-opacity duration-300"></div>
+                    <span
+                        class="absolute inset-0 z-10 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">Jelajahi
+                        Pekerjaan</span>
+                </a>
+                <a class="px-8 py-4 glass-panel border border-white/10 text-white rounded-full font-semibold text-lg hover:bg-white/5 transition-all hover:scale-105 w-full sm:w-auto"
+                    href="#about">
+                    Tentang Saya
+                </a>
+            </div>
+        </div>
+        <div
+            class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 animate-bounce" data-aos="fade-up" data-aos-delay="700" data-aos-anchor-placement="top-bottom">
+            <span class="text-xs uppercase tracking-[0.2em]">Scroll</span>
+            <span class="material-icons-round">keyboard_arrow_down</span>
+        </div>
+    </section>
+    <section class="py-12 border-y border-white/5 bg-surface/30 backdrop-blur-sm relative overflow-hidden" data-aos="fade-up">
+        <div
+            class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-50">
+        </div>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/5" data-aos="fade-up" data-aos-delay="200">
+                <div>
+                    <div class="text-3xl md:text-5xl font-bold text-white mb-2">3+</div>
+                    <div class="text-xs uppercase tracking-widest text-gray-500">Years XP</div>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-5xl font-bold text-white mb-2">20+</div>
+                    <div class="text-xs uppercase tracking-widest text-gray-500">They Said</div>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-5xl font-bold text-white mb-2">75%</div>
+                    <div class="text-xs uppercase tracking-widest text-gray-500">Experience</div>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-5xl font-bold text-white mb-2">100%</div>
+                    <div class="text-xs uppercase tracking-widest text-gray-500">Quality</div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-secondary to-transparent opacity-50">
+        </div>
+    </section>
+    <section class="py-32 relative bg-[#050505] overflow-hidden" id="services">
+        <div class="absolute top-0 left-0 w-full h-full opacity-5">
+            <div class="absolute top-20 left-10 w-64 h-64 bg-gradient-to-r from-primary/10 to-accent/10 rounded-full filter blur-3xl animate-float" data-aos="fade-right" data-aos-duration="2000"></div>
+        </div>
+        <div class="max-w-6xl mx-auto px-6" data-aos="fade-up">
+            <div class="mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6 text-white">Bagian <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Hidup Saya</span>
+                </h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-primary to-accent rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div
+                    class="group glass-card p-8 rounded-3xl transition-all duration-500 card-glow relative overflow-hidden hover:scale-105 transform transition-transform duration-300"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-8 border border-white/10 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
+                        <span class="material-icons-round text-3xl text-primary">design_services</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white group-hover:translate-x-2 transition-transform">UI/UX
+                        Design</h3>
+                    <p class="text-gray-400 italic relative z-10 transform transition-all duration-500 group-hover:translate-y-1 group-hover:text-gray-300">
+                        Merancang adalah seni, dan seni adalah merancang.
+                    </p>
+                </div>
+                <div
+                    class="group glass-card p-8 rounded-3xl transition-all duration-500 card-glow relative overflow-hidden hover:scale-105 transform transition-transform duration-300"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-8 border border-white/10 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
+                        <span class="material-icons-round text-3xl text-secondary">code</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white group-hover:translate-x-2 transition-transform">
+                        Frontend Dev</h3>
+                    <p class="text-gray-400 italic relative z-10 transform transition-all duration-500 group-hover:translate-y-1 group-hover:text-gray-300">
+                        Tidak ada line error, tetapi komponen tidak muncul, sungguh aku benci kau react.
+                    </p>
+                </div>
+                <div
+                    class="group glass-card p-8 rounded-3xl transition-all duration-500 card-glow relative overflow-hidden hover:scale-105 transform transition-transform duration-300"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-8 border border-white/10 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
+                        <span class="material-icons-round text-3xl text-accent">draw</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white group-hover:translate-x-2 transition-transform">
+                        Graphic Design</h3>
+                    <p class="text-gray-400 italic relative z-10 transform transition-all duration-500 group-hover:translate-y-1 group-hover:text-gray-300">
+                        Perasaan adalah rasa mutlak yang diberikan tuhan, menyampaikan pikiran dengan senang hati.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-32 relative bg-[#050505] overflow-hidden" id="tentang">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-full filter blur-3xl animate-float" data-aos="zoom-in" data-aos-duration="2000"></div>
+        </div>
+        <div class="max-w-6xl mx-auto px-6" data-aos="fade-up">
+            <div class="mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6 text-white">Pendidikan <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Saya</span></h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-primary to-accent rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div
+                    class="group glass-card p-8 rounded-3xl transition-all duration-500 card-glow relative overflow-hidden hover:scale-105 transform transition-transform duration-300"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-8 border border-white/10 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
+                        <span class="material-icons-round text-3xl text-primary">school</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white group-hover:translate-x-2 transition-transform">SDN
+                        Tuwiri Wetan III</h3>
+                    <p class="text-gray-400 italic relative z-10 transform transition-all duration-500 group-hover:translate-y-1 group-hover:text-gray-300">
+                        Mendapatkan sebuah teman, Pengalaman hidup baru, Benci dengan matematika.
+                    </p>
+                </div>
+                <div
+                    class="group glass-card p-8 rounded-3xl transition-all duration-500 card-glow relative overflow-hidden hover:scale-105 transform transition-transform duration-300"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-8 border border-white/10 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
+                        <span class="material-icons-round text-3xl text-secondary">school</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white group-hover:translate-x-2 transition-transform">MTS
+                        Miftahul Huda</h3>
+                    <p class="text-gray-400 italic relative z-10 transform transition-all duration-500 group-hover:translate-y-1 group-hover:text-gray-300">
+                        Masa yang sangat mnenyenangkan, Teman yang begitu banyak, 3 tahun bersama di rumah kerabat
+                        sepupu, Benci dengan Nashor (Nahwu Sorof).
+                    </p>
+                </div>
+                <div
+                    class="group glass-card p-8 rounded-3xl transition-all duration-500 card-glow relative overflow-hidden hover:scale-105 transform transition-transform duration-300"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-8 border border-white/10 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
+                        <span class="material-icons-round text-3xl text-accent">school</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white group-hover:translate-x-2 transition-transform">SMK
+                        Taruna Jaya Prawira</h3>
+                    <p class="text-gray-400 italic relative z-10 transform transition-all duration-500 group-hover:translate-y-1 group-hover:text-gray-300">
+                        Persetan dengan wanita dikarenakan katanya sih masa masa untuk PDKt an. Saya paling senang
+                        dengan kejuruan.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-32 px-6 relative bg-surface/20 overflow-hidden" id="work">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-1/3 left-1/4 w-64 h-64 bg-gradient-to-r from-primary/10 to-accent/10 rounded-full filter blur-3xl animate-float" data-aos="fade-right" data-aos-duration="2000"></div>
+        </div>
+        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent">
+        </div>
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div>
+                    <h2 class="text-4xl md:text-6xl font-bold mb-4 text-white">Karya <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-green-400">Pilihan</span>
+                    </h2>
+                    <p class="text-lg text-gray-400">Kurasi artefak digital.</p>
+                </div>
+                <a class="px-6 py-3 rounded-full border border-white/20 text-white hover:bg-white hover:text-black transition-all flex items-center gap-2 group relative z-10 pointer-events-auto"
+                    href="collection.html" onclick="window.location.href='collection.html'; return false;">
+                    View Collection
+                    <span
+                        class="material-icons-round text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10" data-aos="fade-up" data-aos-delay="200">
+                <div class="group cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:z-10 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-surface aspect-[4/3] mb-6 shadow-2xl">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10 opacity-60 transition-opacity group-hover:opacity-40">
+                        </div>
+                        <img alt="" src="pntest.jpg"
+                            class="object-cover w-full h-full transform transition-all duration-700 group-hover:scale-110 filter brightness-90 group-hover:brightness-100 group-hover:contrast-110"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL8zMiz0NDtjpD4W2PNOTWIbTCdwJg4NhfnZe0EWsdn_bdwUKor8-X9qqo9SEcSwGU7xMpdxlM-LYy8Sp5ObIO5PmjXp4HiX9mtlSUy9kbRGd8DdjkTTdqsIo4sb6AW-bMAtfC1iyaZAynZHAMmUwiWdW9oAybEcAoD2r56SeF-1fweTd_GHhA-ytbeJZAly9EKPzV2RDlPoPfEV3fEwUDZrne2EjXAFwIWr46pEdtJqM6CNnmE0Lcxqv0Z5cMzCQ-New1WF--N6q3" />
+                        <div
+                            class="absolute top-6 right-6 z-20 px-4 py-2 bg-black/50 backdrop-blur-md border border-white/10 rounded-full text-xs font-bold text-white tracking-wider uppercase">
+                            Dashboard
+                        </div>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Pantest -
+                        Quiz Hiragana & Katakana</h3>
+                    <div class="flex gap-3 text-sm font-medium text-gray-500 transition-all duration-300 group-hover:gap-4">
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">UI/UX</span>
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Learning</span>
+                    </div>
+                </div>
+                <div class="group cursor-pointer md:mt-24">
+                    <div
+                        class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-surface aspect-[4/3] mb-6 shadow-2xl">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10 opacity-60 transition-opacity group-hover:opacity-40">
+                        </div>
+                        <img alt="" src="diesnatalis.jpg"
+                            class="object-cover w-full h-full transform transition-all duration-700 group-hover:scale-110 filter brightness-90 group-hover:brightness-100 group-hover:contrast-110"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPk5MfTIRXRmuccZ19Lqe-9AvBA9ffmPJwyrGPQ-zEANsatRKLdLgrkHXmBKlu-UKtmQe4d1rVii6Eghnr59zcTPb7ujQqC_VnCcitWJ0NFOe_oe4u2zq1lOmtdExb5C2wUxq0g6CCImmOYkHHL-JbYDUCvA5QAH3XbK0JgJPqMohzKghk4lK19EXOzS9At2MzqAM6iI-qQw-0tB6IIha3gljjjtAJ1VKv-VarsPeucVKrEWWz2itNBCp8JhxUbZPj2wqH7ouK7jd3" />
+                        <div
+                            class="absolute top-6 right-6 z-20 px-4 py-2 bg-black/50 backdrop-blur-md border border-white/10 rounded-full text-xs font-bold text-white tracking-wider uppercase">
+                            Logo - Design
+                        </div>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white mb-2 group-hover:text-secondary transition-colors">Logo
+                        Diesnatalis</h3>
+                    <div class="flex gap-3 text-sm font-medium text-gray-500 transition-all duration-300 group-hover:gap-4">
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Graphic Designer</span>
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Visual</span>
+                    </div>
+                </div>
+                <div class="group cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:z-10 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-surface aspect-[4/3] mb-6 shadow-2xl">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10 opacity-60 transition-opacity group-hover:opacity-40">
+                        </div>
+                        <img alt="" src="landing-page-galata.png"
+                            class="object-cover w-full h-full transform transition-all duration-700 group-hover:scale-110 filter brightness-90 group-hover:brightness-100 group-hover:contrast-110"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAInwqZOWReazEs3hfIJjkjIfFCLdYqKfjN_pBCJMp5GB1G3_cxv47itYg3E2Cl4tH82p66qkpeiDKRHGuYhhm5Qhi7WJGwunKKBnpHPTa88YMMzFz2wSbeCnHkvVS5DB10DT90JTbEoBD3E993NlTtagMYMRe67Ito11Eo_cJZcBSFU2ZeKdjWET6yzBa4uIkhNSZMDhw0W5OqHG5TjCQixTa2XstuDHmIkA7QUwoTL-8GL5L9hbpVCgZQxJVG1c08DoLxFMv6Y2gP" />
+                        <div
+                            class="absolute top-6 right-6 z-20 px-4 py-2 bg-black/50 backdrop-blur-md border border-white/10 rounded-full text-xs font-bold text-white tracking-wider uppercase">
+                            Mobile
+                        </div>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white mb-2 group-hover:text-accent transition-colors">Web Service
+                        - Galata</h3>
+                    <div class="flex gap-3 text-sm font-medium text-gray-500 transition-all duration-300 group-hover:gap-4">
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Landing Page</span>
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">UI Design</span>
+                    </div>
+                </div>
+                <div class="group cursor-pointer md:mt-24">
+                    <div
+                        class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-surface aspect-[4/3] mb-6 shadow-2xl">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10 opacity-60 transition-opacity group-hover:opacity-40">
+                        </div>
+                        <img alt="" src="Landing-page-ingress.png"
+                            class="object-cover w-full h-full transform transition-all duration-700 group-hover:scale-110 filter brightness-90 group-hover:brightness-100 group-hover:contrast-110"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIgRPJnIWOl4gd4iBtVrtQHnzTqHbBGQuj3fc67EeediAdIcgVRMbK2CDeFtY5pTb_4vt-MjBtvxfpwJET8uwVgRBzJDeA28OHTmpQGbBd0TsaW_U4dG91M-GSieGBmfTGzY8TqeQ3R5EYko6qs1eVvwnUQyPy0HpwJAPnvL6nYekpaLjpzVOorUKUIMMjejWKa_VV7_1Pa0qLCfxCanLxLzMHbIg501j5-BkJiIWiXVbaXpxt71WLKT_Y4zLizIv49actoCq8NJBV" />
+                        <div
+                            class="absolute top-6 right-6 z-20 px-4 py-2 bg-black/50 backdrop-blur-md border border-white/10 rounded-full text-xs font-bold text-white tracking-wider uppercase">
+                            Dashboard
+                        </div>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">Ingress
+                        Marketplace</h3>
+                    <div class="flex gap-3 text-sm font-medium text-gray-500 transition-all duration-300 group-hover:gap-4">
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">UX Design</span>
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Ui Design</span>
+                    </div>
+                </div>
+                <div class="group cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:z-10 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-surface aspect-[4/3] mb-6 shadow-2xl">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10 opacity-60 transition-opacity group-hover:opacity-40">
+                        </div>
+                        <img alt="" src="nft-marketplace.jpg"
+                            class="object-cover w-full h-full transform transition-all duration-700 group-hover:scale-110 filter brightness-90 group-hover:brightness-100 group-hover:contrast-110"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL8zMiz0NDtjpD4W2PNOTWIbTCdwJg4NhfnZe0EWsdn_bdwUKor8-X9qqo9SEcSwGU7xMpdxlM-LYy8Sp5ObIO5PmjXp4HiX9mtlSUy9kbRGd8DdjkTTdqsIo4sb6AW-bMAtfC1iyaZAynZHAMmUwiWdW9oAybEcAoD2r56SeF-1fweTd_GHhA-ytbeJZAly9EKPzV2RDlPoPfEV3fEwUDZrne2EjXAFwIWr46pEdtJqM6CNnmE0Lcxqv0Z5cMzCQ-New1WF--N6q3" />
+                        <div
+                            class="absolute top-6 right-6 z-20 px-4 py-2 bg-black/50 backdrop-blur-md border border-white/10 rounded-full text-xs font-bold text-white tracking-wider uppercase">
+                            Landing Page
+                        </div>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white mb-2 group-hover:text-primary transition-colors">NFT Marketplace</h3>
+                    <div class="flex gap-3 text-sm font-medium text-gray-500 transition-all duration-300 group-hover:gap-4">
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">UI/UX</span>
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Web3</span>
+                    </div>
+                </div>
+                  <div class="group cursor-pointer md:mt-24">
+                    <div
+                        class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-surface aspect-[4/3] mb-6 shadow-2xl">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10 opacity-60 transition-opacity group-hover:opacity-40">
+                        </div>
+                        <img alt="" src="oentoseno.jpg"
+                            class="object-cover w-full h-full transform transition-all duration-700 group-hover:scale-110 filter brightness-90 group-hover:brightness-100 group-hover:contrast-110"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPk5MfTIRXRmuccZ19Lqe-9AvBA9ffmPJwyrGPQ-zEANsatRKLdLgrkHXmBKlu-UKtmQe4d1rVii6Eghnr59zcTPb7ujQqC_VnCcitWJ0NFOe_oe4u2zq1lOmtdExb5C2wUxq0g6CCImmOYkHHL-JbYDUCvA5QAH3XbK0JgJPqMohzKghk4lK19EXOzS9At2MzqAM6iI-qQw-0tB6IIha3gljjjtAJ1VKv-VarsPeucVKrEWWz2itNBCp8JhxUbZPj2wqH7ouK7jd3" />
+                        <div
+                            class="absolute top-6 right-6 z-20 px-4 py-2 bg-black/50 backdrop-blur-md border border-white/10 rounded-full text-xs font-bold text-white tracking-wider uppercase">
+                            Landing Page - Design
+                        </div>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white mb-2 group-hover:text-secondary transition-colors">Oentoseno - Toko Batik</h3>
+                    <div class="flex gap-3 text-sm font-medium text-gray-500 transition-all duration-300 group-hover:gap-4">
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">UI UX Design</span>
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">E-commerce</span>
+                    </div>
+                </div>
+                 <div class="group cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:z-10 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-surface aspect-[4/3] mb-6 shadow-2xl">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10 opacity-60 transition-opacity group-hover:opacity-40">
+                        </div>
+                        <img alt="" src="aloevera.jpg"
+                            class="object-cover w-full h-full transform transition-all duration-700 group-hover:scale-110 filter brightness-90 group-hover:brightness-100 group-hover:contrast-110"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAInwqZOWReazEs3hfIJjkjIfFCLdYqKfjN_pBCJMp5GB1G3_cxv47itYg3E2Cl4tH82p66qkpeiDKRHGuYhhm5Qhi7WJGwunKKBnpHPTa88YMMzFz2wSbeCnHkvVS5DB10DT90JTbEoBD3E993NlTtagMYMRe67Ito11Eo_cJZcBSFU2ZeKdjWET6yzBa4uIkhNSZMDhw0W5OqHG5TjCQixTa2XstuDHmIkA7QUwoTL-8GL5L9hbpVCgZQxJVG1c08DoLxFMv6Y2gP" />
+                        <div
+                            class="absolute top-6 right-6 z-20 px-4 py-2 bg-black/50 backdrop-blur-md border border-white/10 rounded-full text-xs font-bold text-white tracking-wider uppercase">
+                            Landing Page - Design
+                        </div>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white mb-2 group-hover:text-accent transition-colors">Aloevera - Healthy</h3>
+                    <div class="flex gap-3 text-sm font-medium text-gray-500 transition-all duration-300 group-hover:gap-4">
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Healthy</span>
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">UI Design</span>
+                    </div>
+                </div>
+                <div class="group cursor-pointer md:mt-24">
+                    <div
+                        class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-surface aspect-[4/3] mb-6 shadow-2xl">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10 opacity-60 transition-opacity group-hover:opacity-40">
+                        </div>
+                        <img alt="" src="rumah-kita.jpg"
+                            class="object-cover w-full h-full transform transition-all duration-700 group-hover:scale-110 filter brightness-90 group-hover:brightness-100 group-hover:contrast-110"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIgRPJnIWOl4gd4iBtVrtQHnzTqHbBGQuj3fc67EeediAdIcgVRMbK2CDeFtY5pTb_4vt-MjBtvxfpwJET8uwVgRBzJDeA28OHTmpQGbBd0TsaW_U4dG91M-GSieGBmfTGzY8TqeQ3R5EYko6qs1eVvwnUQyPy0HpwJAPnvL6nYekpaLjpzVOorUKUIMMjejWKa_VV7_1Pa0qLCfxCanLxLzMHbIg501j5-BkJiIWiXVbaXpxt71WLKT_Y4zLizIv49actoCq8NJBV" />
+                        <div
+                            class="absolute top-6 right-6 z-20 px-4 py-2 bg-black/50 backdrop-blur-md border border-white/10 rounded-full text-xs font-bold text-white tracking-wider uppercase">
+                            Catalog - Product
+                        </div>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">Rumah Kita</h3>
+                    <div class="flex gap-3 text-sm font-medium text-gray-500 transition-all duration-300 group-hover:gap-4">
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">UX Design</span>
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Furniture</span>
+                    </div>
+                </div>
+                <div class="group cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:z-10 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-surface aspect-[4/3] mb-6 shadow-2xl">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10 opacity-60 transition-opacity group-hover:opacity-40">
+                        </div>
+                        <img alt="" src="utopia.png"
+                            class="object-cover w-full h-full transform transition-all duration-700 group-hover:scale-110 filter brightness-90 group-hover:brightness-100 group-hover:contrast-110"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL8zMiz0NDtjpD4W2PNOTWIbTCdwJg4NhfnZe0EWsdn_bdwUKor8-X9qqo9SEcSwGU7xMpdxlM-LYy8Sp5ObIO5PmjXp4HiX9mtlSUy9kbRGd8DdjkTTdqsIo4sb6AW-bMAtfC1iyaZAynZHAMmUwiWdW9oAybEcAoD2r56SeF-1fweTd_GHhA-ytbeJZAly9EKPzV2RDlPoPfEV3fEwUDZrne2EjXAFwIWr46pEdtJqM6CNnmE0Lcxqv0Z5cMzCQ-New1WF--N6q3" />
+                        <div
+                            class="absolute top-6 right-6 z-20 px-4 py-2 bg-black/50 backdrop-blur-md border border-white/10 rounded-full text-xs font-bold text-white tracking-wider uppercase">
+                            Website - Jobstreet
+                        </div>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Utopia - Usaha Tanpa Batas Peluang Pasti Ada</h3>
+                    <div class="flex gap-3 text-sm font-medium text-gray-500 transition-all duration-300 group-hover:gap-4">
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Job Street</span>
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Website</span>
+                    </div>
+                </div>
+                 <div class="group cursor-pointer md:mt-24">
+                    <div
+                        class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-surface aspect-[4/3] mb-6 shadow-2xl">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10 opacity-60 transition-opacity group-hover:opacity-40">
+                        </div>
+                        <img alt="" src="boostyour.jpg"
+                            class="object-cover w-full h-full transform transition-all duration-700 group-hover:scale-110 filter brightness-90 group-hover:brightness-100 group-hover:contrast-110"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIgRPJnIWOl4gd4iBtVrtQHnzTqHbBGQuj3fc67EeediAdIcgVRMbK2CDeFtY5pTb_4vt-MjBtvxfpwJET8uwVgRBzJDeA28OHTmpQGbBd0TsaW_U4dG91M-GSieGBmfTGzY8TqeQ3R5EYko6qs1eVvwnUQyPy0HpwJAPnvL6nYekpaLjpzVOorUKUIMMjejWKa_VV7_1Pa0qLCfxCanLxLzMHbIg501j5-BkJiIWiXVbaXpxt71WLKT_Y4zLizIv49actoCq8NJBV" />
+                        <div
+                            class="absolute top-6 right-6 z-20 px-4 py-2 bg-black/50 backdrop-blur-md border border-white/10 rounded-full text-xs font-bold text-white tracking-wider uppercase">
+                            Poster - Design
+                        </div>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">Galata Design Poster</h3>
+                    <div class="flex gap-3 text-sm font-medium text-gray-500 transition-all duration-300 group-hover:gap-4">
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Sosmed Design</span>
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Graphic Design</span>
+                    </div>
+                </div>
+                    <div class="group cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:z-10 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-surface aspect-[4/3] mb-6 shadow-2xl">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10 opacity-60 transition-opacity group-hover:opacity-40">
+                        </div>
+                        <img alt="" src="Social-d-galata.jpg"
+                            class="object-cover w-full h-full transform transition-all duration-700 group-hover:scale-110 filter brightness-90 group-hover:brightness-100 group-hover:contrast-110"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL8zMiz0NDtjpD4W2PNOTWIbTCdwJg4NhfnZe0EWsdn_bdwUKor8-X9qqo9SEcSwGU7xMpdxlM-LYy8Sp5ObIO5PmjXp4HiX9mtlSUy9kbRGd8DdjkTTdqsIo4sb6AW-bMAtfC1iyaZAynZHAMmUwiWdW9oAybEcAoD2r56SeF-1fweTd_GHhA-ytbeJZAly9EKPzV2RDlPoPfEV3fEwUDZrne2EjXAFwIWr46pEdtJqM6CNnmE0Lcxqv0Z5cMzCQ-New1WF--N6q3" />
+                        <div
+                            class="absolute top-6 right-6 z-20 px-4 py-2 bg-black/50 backdrop-blur-md border border-white/10 rounded-full text-xs font-bold text-white tracking-wider uppercase">
+                            Social Media - Design
+                        </div>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Social Media Design</h3>
+                    <div class="flex gap-3 text-sm font-medium text-gray-500 transition-all duration-300 group-hover:gap-4">
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Graphic Design</span>
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Visual</span>
+                    </div>
+                </div>
+                   <div class="group cursor-pointer md:mt-24">
+                    <div
+                        class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-surface aspect-[4/3] mb-6 shadow-2xl">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10 opacity-60 transition-opacity group-hover:opacity-40">
+                        </div>
+                        <img alt="" src="portfo-desain-ga.jpg"
+                            class="object-cover w-full h-full transform transition-all duration-700 group-hover:scale-110 filter brightness-90 group-hover:brightness-100 group-hover:contrast-110"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIgRPJnIWOl4gd4iBtVrtQHnzTqHbBGQuj3fc67EeediAdIcgVRMbK2CDeFtY5pTb_4vt-MjBtvxfpwJET8uwVgRBzJDeA28OHTmpQGbBd0TsaW_U4dG91M-GSieGBmfTGzY8TqeQ3R5EYko6qs1eVvwnUQyPy0HpwJAPnvL6nYekpaLjpzVOorUKUIMMjejWKa_VV7_1Pa0qLCfxCanLxLzMHbIg501j5-BkJiIWiXVbaXpxt71WLKT_Y4zLizIv49actoCq8NJBV" />
+                        <div
+                            class="absolute top-6 right-6 z-20 px-4 py-2 bg-black/50 backdrop-blur-md border border-white/10 rounded-full text-xs font-bold text-white tracking-wider uppercase">
+                            portofolio - Design
+                        </div>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">Portofolio</h3>
+                    <div class="flex gap-3 text-sm font-medium text-gray-500 transition-all duration-300 group-hover:gap-4">
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Portofolio</span>
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Graphic Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-32 relative bg-[#050505] overflow-hidden" data-aos="fade-up">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full filter blur-3xl animate-pulse" data-aos="zoom-in" data-aos-duration="2000"></div>
+        </div>
+        <div
+            class="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/30 via-transparent to-transparent">
+        </div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-20" data-aos="fade-up" data-aos-delay="300">
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6 leading-tight tracking-tight transform transition-all duration-700 hover:scale-105" data-aos="fade-up" data-aos-delay="300">
+                    They <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary">Say</span>
+                </h1>
+                <p class="text-lg text-gray-400">Suara dari internet. Lihat apa yang dikatakan pengguna tentang pengalaman digital yang saya buat.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="200">
+                <div
+                    class="glass-card p-8 rounded-3xl relative group hover:border-primary/30 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-primary/10"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="absolute -top-6 -left-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span
+                            class="material-icons-round text-6xl text-primary/20 transform -rotate-12">format_quote</span>
+                    </div>
+                    <div class="flex items-center gap-4 mb-6 transform transition-transform duration-300 group-hover:translate-x-2">
+                        <div
+                            class="w-12 h-12 rounded-full bg-gradient-to-tr from-primary to-blue-500 p-[2px] review-avatar group-hover:scale-110 transition-transform duration-500">
+                            <img alt="User Avatar"
+                                class="w-full h-full rounded-full object-cover border-2 border-[#050505] group-hover:rotate-6 transition-transform duration-700"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlfeUYnhNwI5WjC_ilZCVycwj8oPD0MwmaM9COSNPwSBukIHG0W8kQcYvvwVmOAZhWpRX0E4Zbi8LzcCoGS2IZcpzOSFRnojY85tkUj9K8dBc0_wp3VW43GNgmk3qVKIk6gk8nBs4xIIrU2J1KbOvMbsuED0I7Msu_19sl58dFrtv-O-d3XROzrpr9YbtmGvcGZMGGCBlJk5NvCuiUi81aX6ttLjYmwVoXMcQBrW-xF5OXrgfzOOj3DAoJqlMgLNhXx6e0ICVXXsSO" />
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-lg leading-none group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-blue-500 group-hover:text-transparent group-hover:bg-clip-text transition-all duration-500">Sek To</h4>
+                            <p class="text-xs text-primary font-medium mt-1">Founder caffe GOD-JEk</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed relative z-10 transform transition-all duration-500 group-hover:translate-x-2 group-hover:text-gray-100">
+                        "Ya Gini saya nilai 90 untuk early."
+                    </p>
+                    <div class="mt-6 flex gap-1 text-yellow-400 text-sm transition-all duration-300 group-hover:gap-2 [&>span]:hover:scale-125 [&>span]:hover:rotate-12 [&>span]:transition-all [&>span]:duration-300 [&>span]:ease-out [&>span]:hover:drop-shadow-[0_0_8px_rgba(250,204,21,0.5)] [&>span]:hover:-translate-y-1">
+                        <span class="material-icons-round">star</span>
+                        <span class="material-icons-round">star</span>
+                        <span class="material-icons-round">star</span>
+                        <span class="material-icons-round">star</span>
+                        <span class="material-icons-round">star</span>
+                    </div>
+                </div>
+                <div
+                    class="glass-card p-8 rounded-3xl relative group hover:border-secondary/30 transition-all duration-300 mt-0 lg:mt-12">
+                    <div
+                        class="absolute -top-6 -left-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span
+                            class="material-icons-round text-6xl text-secondary/20 transform -rotate-12">format_quote</span>
+                    </div>
+                    <div class="flex items-center gap-4 mb-6 transform transition-transform duration-300 group-hover:translate-x-2">
+                        <div
+                            class="w-12 h-12 rounded-full bg-gradient-to-tr from-secondary to-green-400 p-[2px] review-avatar">
+                            <img alt="User Avatar"
+                                class="w-full h-full rounded-full object-cover border-2 border-[#050505]"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi8qNBUJDr4cHBylFBG3BKTgjmlnO6VEyiEp9WnJniqqmlcQzaavVeb5PWy4fAVdUTdUXWmxD4csY91-_mxR-CsuCSweSf_K0gfmtaECmApJ3zAELhP58IhPIOqi9fe-Mkeqdxn3Zcmw0BaOn5oRQU8Qh_Nzffo3xdMvkGgSt98TDi4wFwsugiimYdR9cXyXzRUQoi5ynkFczeIWGeQUH9-jSfzjR7UVwBBwI1OIY9t4N3s58ks9OkvZ4vyrVKtMMds668Mo97ndi4" />
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-lg leading-none group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-blue-500 group-hover:text-transparent group-hover:bg-clip-text transition-all duration-500">Raden Arthur</h4>
+                            <p class="text-xs text-secondary font-medium mt-1">My friend</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed relative z-10 transform transition-all duration-500 group-hover:translate-x-2 group-hover:text-gray-100">
+                        "Sangat baik, saya yakin ada potensi untuk kamu dimasa depan."
+                    </p>
+                    <div class="mt-6 flex gap-1 text-yellow-400 text-sm transition-all duration-300 group-hover:gap-2 [&>span]:hover:scale-125 [&>span]:hover:rotate-12 [&>span]:transition-all [&>span]:duration-300 [&>span]:ease-out [&>span]:hover:drop-shadow-[0_0_8px_rgba(250,204,21,0.5)] [&>span]:hover:-translate-y-1">
+                        <span class="material-icons-round">star</span>
+                        <span class="material-icons-round">star</span>
+                        <span class="material-icons-round">star</span>
+                        <span class="material-icons-round">star</span>
+                        <span class="material-icons-round">star</span>
+                    </div>
+                </div>
+                <div
+                    class="glass-card p-8 rounded-3xl relative group hover:border-accent/30 transition-all duration-300">
+                    <div
+                        class="absolute -top-6 -left-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span
+                            class="material-icons-round text-6xl text-accent/20 transform -rotate-12">format_quote</span>
+                    </div>
+                    <div class="flex items-center gap-4 mb-6 transform transition-transform duration-300 group-hover:translate-x-2">
+                        <div
+                            class="w-12 h-12 rounded-full bg-gradient-to-tr from-accent to-purple-500 p-[2px] review-avatar">
+                            <img alt="User Avatar"
+                                class="w-full h-full rounded-full object-cover border-2 border-[#050505]"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrT0SIWWHzQr1Gqs6gBm-goIKuMEd35Bc846folHI0C8U1FoQCxuZdprCdrBsO4uYTLzBpDff40rg9ZxpYy7zDPTbgHjPFyZau1iX-z8-bp6utWEG6uMOs2lUxjr5w6Zp100UCq7uc9_FbCws7Hkt2QeaD0ZkxHT_WcWRRguSYotsc3keFHqOdPvp_tKqta2J1N-lrwc7tr5ehrPZ8vEJ6XvIIxotfhWyKeMrzuJsjeriTpyWu6V0DSlBGP9FvoCQfkQIq_e72YZSi" />
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-lg leading-none group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-blue-500 group-hover:text-transparent group-hover:bg-clip-text transition-all duration-500">Ibu saya</h4>
+                            <p class="text-xs text-accent font-medium mt-1">Founder ygakrniawan</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed relative z-10 transform transition-all duration-500 group-hover:translate-x-2 group-hover:text-gray-100">
+                        "Kamu memiliki kebiasaan yang bagus di internet."
+                    </p>
+                    <div class="mt-6 flex gap-1 text-yellow-400 text-sm transition-all duration-300 group-hover:gap-2 [&>span]:hover:scale-125 [&>span]:hover:rotate-12 [&>span]:transition-all [&>span]:duration-300 [&>span]:ease-out [&>span]:hover:drop-shadow-[0_0_8px_rgba(250,204,21,0.5)] [&>span]:hover:-translate-y-1">
+                        <span class="material-icons-round">star</span>
+                        <span class="material-icons-round">star</span>
+                        <span class="material-icons-round">star</span>
+                        <span class="material-icons-round">star</span>
+                        <span class="material-icons-round">star_half</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+    <footer class="py-32 px-6 relative overflow-hidden" id="contact">
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-b from-primary/10 to-secondary/10 rounded-full blur-[100px] -z-10 pointer-events-none">
+        </div>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <h2 class="text-5xl md:text-8xl font-black text-white mb-8 tracking-tighter" data-aos="fade-up">
+                LET'S BUILD <br />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-secondary">THE
+                    FUTURE.</span>
+            </h2>
+            <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+                Seperti kata Spongebob, "Saya Siap".
+            </p>
+            <a class="relative inline-flex group items-center justify-center px-10 py-5 bg-white text-black rounded-full font-bold text-lg overflow-hidden transition-all hover:scale-105 shadow-[0_0_40px_rgba(255,255,255,0.3)]"
+                href="mailto:hello@portfolio.com">
+                <span class="relative z-10">Segera Hubungi Saya</span>
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-secondary via-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                </div>
+                <div class="absolute inset-0 bg-white group-hover:opacity-0 transition-opacity duration-300"></div>
+                <span
+                    class="absolute inset-0 z-10 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">Segera Hubungi Saya</span>
+            </a>
+            <div class="mt-24 flex justify-center gap-8">
+                <!-- TikTok -->
+                <a href="#" class="group w-14 h-14 flex items-center justify-center rounded-2xl glass-panel
+         text-white hover:bg-white hover:text-black
+         transition-all duration-300 hover:-translate-y-2">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12.525 0h3.066a6.5 6.5 0 0 0 1.453 4.118A6.493 6.493 0 0 0 21 5.568v3.055a9.51 9.51 0 0 1-5.409-1.67v7.682a6.51 6.51 0 1 1-6.51-6.51c.226 0 .451.014.675.043v3.233a3.273 3.273 0 1 0 3.769 3.234V0z" />
+                    </svg>
+                </a>
+
+                <!-- Instagram -->
+                <a href="#" class="group w-14 h-14 flex items-center justify-center rounded-2xl glass-panel
+         text-white hover:bg-white hover:text-black
+         transition-all duration-300 hover:-translate-y-2">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M7.75 2h8.5C19.44 2 22 4.56 22 7.75v8.5C22 19.44 19.44 22 16.25 22h-8.5C4.56 22 2 19.44 2 16.25v-8.5C2 4.56 4.56 2 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5z" />
+                        <path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z" />
+                        <circle cx="17.5" cy="6.5" r="1" />
+                    </svg>
+                </a>
+
+                <!-- GitHub -->
+                <a href="#" class="group w-14 h-14 flex items-center justify-center rounded-2xl glass-panel
+         text-white hover:bg-white hover:text-black
+         transition-all duration-300 hover:-translate-y-2">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.48 2 2 6.58 2 12.26c0 4.54 2.87 8.39 6.84 9.75.5.09.68-.22.68-.49v-1.72c-2.78.62-3.37-1.38-3.37-1.38-.46-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.9 1.56 2.36 1.11 2.94.85.09-.67.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.2 9.2 0 0 1 5 0c1.9-1.33 2.74-1.05 2.74-1.05.56 1.4.21 2.44.11 2.7.64.72 1.02 1.64 1.02 2.76 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.59.69.49A10.02 10.02 0 0 0 22 12.26C22 6.58 17.52 2 12 2z" />
+                    </svg>
+                </a>
+
+                <!-- WhatsApp -->
+                <a href="#" class="group w-14 h-14 flex items-center justify-center rounded-2xl glass-panel
+         text-white hover:bg-white hover:text-black
+         transition-all duration-300 hover:-translate-y-2">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2a10 10 0 0 0-8.47 15.31L2 22l4.86-1.5A10 10 0 1 0 12 2zm0 1.5a8.5 8.5 0 0 1 0 17 8.4 8.4 0 0 1-4.1-1.07l-.3-.17-2.88.9.94-2.8-.19-.32A8.5 8.5 0 0 1 12 3.5zm4.37 10.74c-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.54.12-.16.24-.62.79-.76.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.21-.72-.64-1.2-1.44-1.34-1.68-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.48-.4-.41-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2 0 1.18.86 2.32.98 2.48.12.16 1.7 2.6 4.12 3.64.58.25 1.04.4 1.4.51.59.19 1.12.16 1.54.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28z" />
+                    </svg>
+                </a>
+
+            </div>
+            <!-- Love Counter Section -->
+            <div class="mt-16 pt-8 border-t border-white/10">
+                <div class="flex flex-col items-center justify-center gap-6 mb-8">
+                    <!-- Cat Animation -->
+                    <div class="relative">
+                        <div class="text-6xl animate-bounce" style="animation-duration: 2s;">
+                            🐱
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-4 h-4 bg-red-500 rounded-full animate-ping"></div>
+                    </div>
+                    
+                    <!-- Love Button -->
+                    <div class="text-center">
+                        <p class="text-gray-400 mb-3 text-sm">Suka dengan website ini?</p>
+                        <button onclick="addLove()" class="group relative px-8 py-4 bg-gradient-to-r from-pink-500 via-red-500 to-rose-500 text-white rounded-full font-bold text-lg overflow-hidden transition-all hover:scale-110 hover:shadow-[0_0_40px_rgba(236,72,153,0.6)] active:scale-95">
+                            <span class="relative z-10 flex items-center gap-3">
+                                <span class="text-2xl animate-pulse" id="heartIcon">❤️</span>
+                                <span id="loveCount">0</span>
+                                <span class="text-sm">Loves</span>
+                            </span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-rose-600 via-pink-600 to-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </button>
+                        <p class="text-xs text-gray-500 mt-3">Terima kasih atas dukungannya! 🎉</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div
+                class="mt-8 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                    <p class="hover:text-white transition-colors duration-300"> 2024 Ygakrniawan.</p>
+                    <p class="hover:text-white transition-colors duration-300">Designed &amp; Developed by ygakrniawan</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+        <!-- Rokok Tebakan Section -->
+    <div class="fixed bottom-4 right-4 z-50">
+        <button id="showRokokForm" class="bg-gradient-to-r from-red-600 to-red-800 text-white px-6 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-2">
+            <span class="text-xl">🎮</span> Mini Game
+        </button>
+        
+        <div id="rokokFormContainer" class="hidden bg-gray-900 bg-opacity-90 backdrop-blur-md p-6 rounded-xl shadow-2xl border border-gray-800 mt-4 w-80">
+            <h3 class="text-xl font-bold text-white mb-4">Tebak Asap Favorit Saya</h3>
+            <p class="text-gray-300 text-sm mb-4">Jika benar akan ada hadiah spesial!</p>
+            
+            <form onsubmit="checkRokokAnswer(event)" class="space-y-4">
+                <div>
+                    <input type="text" id="tebakanRokok" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="Masukkan tebakanmu..." required>
+                </div>
+                <button type="submit" class="w-full bg-gradient-to-r from-red-600 to-red-800 text-white py-2 rounded-lg font-bold hover:opacity-90 transition-opacity">Submit Tebakan</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Feedback Modal -->
+    <div id="feedbackModal" class="fixed inset-0 flex items-center justify-center z-[100] bg-black bg-opacity-50 backdrop-blur-sm opacity-0 invisible transition-all duration-300">
+        <div class="bg-gradient-to-br from-gray-900 to-gray-800 p-8 rounded-xl max-w-md w-full mx-4 border-2 border-opacity-30 relative">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <h3 id="modalTitle" class="text-2xl font-bold mb-2">🎉 Wihh keren!</h3>
+            <p id="modalText" class="text-gray-300 mb-6">Selamat, silahkan datang kerumahku!</p>
+            <button onclick="closeModal()" class="w-full bg-gradient-to-r from-red-600 to-red-800 text-white py-2 rounded-lg font-bold hover:opacity-90 transition-opacity">Tutup</button>
+        </div>
+    </div>
+</body>
+</html>
+
+    <script>
+        // Initialize AOS with custom settings
+        // Inisialisasi AOS dengan konfigurasi yang lebih halus
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-out-cubic',
+            once: true,
+            mirror: false,
+            anchorPlacement: 'top-bottom',
+            offset: 20,
+            disable: function() {
+                return window.innerWidth < 768; // Nonaktifkan di mobile
+            }
+        });
+
+        // Efek Parallax
+        document.addEventListener('DOMContentLoaded', function() {
+            const parallaxElements = document.querySelectorAll('.parallax');
+            
+            function updateParallax() {
+                const scrollPosition = window.pageYOffset;
+                
+                parallaxElements.forEach(element => {
+                    const speed = parseFloat(element.getAttribute('data-speed')) || 0.1;
+                    const yPos = -(scrollPosition * speed);
+                    element.style.transform = `translate3d(0, ${yPos}px, 0)`;
+                });
+            }
+            
+            window.addEventListener('scroll', function() {
+                requestAnimationFrame(updateParallax);
+            });
+            
+            // Inisialisasi awal
+            updateParallax();
+            
+            // Filter functionality for project catalog
+            const filterButtons = document.querySelectorAll('[data-filter]');
+            const projectItems = document.querySelectorAll('.project-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('border-white/20', 'text-white');
+                        btn.classList.add('border-white/10', 'text-gray-400');
+                    });
+                    
+                    // Add active class to clicked button
+                    button.classList.remove('border-white/10', 'text-gray-400');
+                    button.classList.add('border-white/20', 'text-white');
+                    
+                    const filter = button.getAttribute('data-filter');
+                    
+                    // Filter projects
+                    projectItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                            // Re-trigger AOS animation
+                            item.setAttribute('data-aos', 'fade-up');
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                    
+                    // Refresh AOS
+                    AOS.refresh();
+                });
+            });
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+        
+        // Sound Modal & Audio Control
+        const bgMusic = document.getElementById('bgMusic');
+        const soundModal = document.getElementById('soundModal');
+        const soundIcon = document.getElementById('soundIcon');
+        let isMusicEnabled = false;
+        
+        // Check if user has already made a choice - run immediately
+        (function() {
+            const soundPreference = localStorage.getItem('soundPreference');
+            
+            if (soundPreference === null) {
+                // First time visitor - show modal
+                soundModal.classList.add('show');
+            } else {
+                // Returning visitor - apply saved preference
+                if (soundPreference === 'enabled') {
+                    // Wait for user interaction before playing
+                    document.addEventListener('click', function initMusic() {
+                        playMusic();
+                        document.removeEventListener('click', initMusic);
+                    }, { once: true });
+                }
+            }
+        })();
+        
+        function enableSound() {
+            localStorage.setItem('soundPreference', 'enabled');
+            soundModal.classList.remove('show');
+            playMusic();
+        }
+        
+        function disableSound() {
+            localStorage.setItem('soundPreference', 'disabled');
+            soundModal.classList.remove('show');
+            stopMusic();
+        }
+        
+        function toggleSound() {
+            if (isMusicEnabled) {
+                stopMusic();
+                localStorage.setItem('soundPreference', 'disabled');
+            } else {
+                playMusic();
+                localStorage.setItem('soundPreference', 'enabled');
+            }
+        }
+        
+        function playMusic() {
+            bgMusic.volume = 0.3; // Set volume to 30%
+            bgMusic.play().then(() => {
+                isMusicEnabled = true;
+                soundIcon.textContent = 'volume_up';
+            }).catch(error => {
+                console.log('Audio playback failed:', error);
+            });
+        }
+        
+        function stopMusic() {
+            bgMusic.pause();
+            isMusicEnabled = false;
+            soundIcon.textContent = 'volume_off';
+        }
+        
+        // Fade in/out music on page visibility change
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                if (isMusicEnabled) {
+                    bgMusic.volume = 0.1;
+                }
+            } else {
+                if (isMusicEnabled) {
+                    bgMusic.volume = 0.3;
+                }
+            }
+        });
+        
+        // Love Counter System
+        const loveCountElement = document.getElementById('loveCount');
+        const heartIcon = document.getElementById('heartIcon');
+        
+        // Load love count from localStorage
+        function loadLoveCount() {
+            const count = localStorage.getItem('websiteLoveCount') || 0;
+            loveCountElement.textContent = count;
+            return parseInt(count);
+        }
+        
+        // Save love count to localStorage
+        function saveLoveCount(count) {
+            localStorage.setItem('websiteLoveCount', count);
+        }
+        
+        // Add love function
+        function addLove() {
+            let currentCount = loadLoveCount();
+            currentCount++;
+            saveLoveCount(currentCount);
+            loveCountElement.textContent = currentCount;
+            
+            // Animate heart icon
+            heartIcon.classList.add('heart-beat');
+            setTimeout(() => {
+                heartIcon.classList.remove('heart-beat');
+            }, 600);
+            
+            // Create floating heart animation
+            createFloatingHeart(event);
+        }
+        
+        // Create floating heart effect
+        function createFloatingHeart(e) {
+            const heart = document.createElement('div');
+            heart.textContent = '❤️';
+            heart.className = 'floating-heart';
+            heart.style.fontSize = '2rem';
+            heart.style.left = e.clientX + 'px';
+            heart.style.top = e.clientY + 'px';
+            
+            document.body.appendChild(heart);
+            
+            // Remove heart after animation
+            setTimeout(() => {
+                heart.remove();
+            }, 2000);
+        }
+        
+        // Initialize love count on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            loadLoveCount();
+        });
+        
+        // Loading Screen Controller
+        const loadingScreen = document.getElementById('loadingScreen');
+        const loadingPercentage = document.getElementById('loadingPercentage');
+        const loadingBar = document.getElementById('loadingBar');
+        let currentPercentage = 0;
+        
+        // Simulate loading progress
+        function updateLoadingProgress() {
+            const interval = setInterval(() => {
+                if (currentPercentage < 90) {
+                    // Fast progress up to 90%
+                    currentPercentage += Math.random() * 15;
+                    if (currentPercentage > 90) currentPercentage = 90;
+                }
+                
+                loadingPercentage.textContent = Math.floor(currentPercentage) + '%';
+                loadingBar.style.width = currentPercentage + '%';
+                
+                if (currentPercentage >= 90) {
+                    clearInterval(interval);
+                }
+            }, 100);
+        }
+        
+        // Complete loading when page is fully loaded
+        window.addEventListener('load', function() {
+            // Complete to 100%
+            currentPercentage = 100;
+            loadingPercentage.textContent = '100%';
+            loadingBar.style.width = '100%';
+            
+            // Hide loading screen after a short delay
+            setTimeout(() => {
+                loadingScreen.classList.add('fade-out');
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }, 500);
+        });
+        
+        // Start loading progress immediately
+        updateLoadingProgress();
+
+         function checkRokokAnswer(event) {
+            event.preventDefault();
+            const answer = document.getElementById('tebakanRokok').value.toLowerCase();
+            const modal = document.getElementById('feedbackModal');
+            const modalText = document.getElementById('modalText');
+            const modalTitle = document.getElementById('modalTitle');
+            
+            if (answer === 'stylo premium') {
+                modalTitle.textContent = '🎉 Selamat!';
+                modalText.textContent = 'Selamat, silahkan datang kerumahku!';
+                modal.classList.remove('bg-red-500', 'border-red-400');
+                modal.classList.add('bg-green-500', 'border-green-400');
+            } else {
+                modalTitle.textContent = '❌ Gagal!';
+                modalText.textContent = 'Kamu gagal menebak';
+                modal.classList.remove('bg-green-500', 'border-green-400');
+                modal.classList.add('bg-red-500', 'border-red-400');
+            }
+            
+            // Show modal
+            modal.classList.remove('opacity-0', 'invisible');
+            modal.classList.add('opacity-100', 'visible');
+            
+            // Hide modal after 3 seconds
+            setTimeout(() => {
+                modal.classList.remove('opacity-100', 'visible');
+                modal.classList.add('opacity-0', 'invisible');
+            }, 3000);
+        }
+        
+        // Close modal function
+        function closeModal() {
+            const modal = document.getElementById('feedbackModal');
+            modal.classList.remove('opacity-100', 'visible');
+            modal.classList.add('opacity-0', 'invisible');
+        }
+        
+        // Toggle Rokok Form
+        document.getElementById('showRokokForm').addEventListener('click', function() {
+            const form = document.getElementById('rokokFormContainer');
+            form.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
